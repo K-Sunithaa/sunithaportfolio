@@ -8,23 +8,51 @@
     padding: 0;
 }
 
+
 html {
     scroll-behavior: smooth;
 }
+
 
 body {
     font-family: Arial, Helvetica, sans-serif;
 
     background:
-        radial-gradient(circle at 10% 10%, rgba(100, 140, 255, 0.18), transparent 25%),
-        radial-gradient(circle at 90% 15%, rgba(160, 120, 255, 0.15), transparent 25%),
-        radial-gradient(circle at 85% 85%, rgba(80, 180, 255, 0.14), transparent 25%),
-        radial-gradient(circle at 15% 85%, rgba(140, 110, 255, 0.10), transparent 22%),
-        linear-gradient(135deg, #f8fbff, #f4f6ff, #faf8ff);
+        radial-gradient(
+            circle at 10% 10%,
+            rgba(100, 140, 255, 0.18),
+            transparent 25%
+        ),
+
+        radial-gradient(
+            circle at 90% 15%,
+            rgba(160, 120, 255, 0.15),
+            transparent 25%
+        ),
+
+        radial-gradient(
+            circle at 85% 85%,
+            rgba(80, 180, 255, 0.14),
+            transparent 25%
+        ),
+
+        radial-gradient(
+            circle at 15% 85%,
+            rgba(140, 110, 255, 0.10),
+            transparent 22%
+        ),
+
+        linear-gradient(
+            135deg,
+            #f8fbff,
+            #f4f6ff,
+            #faf8ff
+        );
 
     background-attachment: fixed;
 
     color: #172033;
+
     line-height: 1.5;
 }
 
@@ -32,34 +60,28 @@ body {
 /* =========================
    HEADER / HERO
 ========================= */
-
 .header {
     max-width: 1100px;
-
     margin: 30px auto 0;
     padding: 50px 50px;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     gap: 45px;
 
-    background:
-        radial-gradient(
-            circle at 85% 20%,
-            rgba(126, 156, 255, 0.18),
-            transparent 25%
-        ),
-        radial-gradient(
-            circle at 5% 90%,
-            rgba(180, 140, 255, 0.15),
-            transparent 25%
-        ),
-        linear-gradient(135deg, #ffffff, #f5f8ff);
+background:
+    linear-gradient(
+        rgba(255, 255, 255, 0.91),
+        rgba(255, 255, 255, 0.91)
+    ),
+    url("assests/header.png");
+
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
 
     border: none;
-
     border-radius: 30px;
 
     box-shadow:
@@ -69,9 +91,45 @@ body {
     overflow: hidden;
 }
 
+
+
+
 .intro {
     flex: 1;
+
     min-width: 0;
+}
+
+
+/* =========================
+   THEME TOGGLE
+========================= */
+
+.theme-toggle button {
+    border: none;
+
+    background: #eef3ff;
+
+    width: 42px;
+    height: 42px;
+
+    border-radius: 50%;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 5px 15px rgba(53, 76, 130, 0.10);
+
+    transition: all 0.3s ease;
+}
+
+
+.theme-toggle button:hover {
+    transform:
+        rotate(15deg)
+        scale(1.08);
 }
 
 
@@ -83,10 +141,12 @@ body {
     display: flex;
 
     justify-content: space-between;
+
     align-items: center;
 
     gap: 25px;
 }
+
 
 .intro h1 {
     font-size: 44px;
@@ -97,6 +157,7 @@ body {
 
     color: #172033;
 }
+
 
 .contact-info {
     display: flex;
@@ -112,6 +173,7 @@ body {
     white-space: nowrap;
 }
 
+
 .contact-info a {
     color: #526074;
 
@@ -119,6 +181,7 @@ body {
 
     transition: color 0.2s ease;
 }
+
 
 .contact-info a:hover {
     color: #2457d6;
@@ -137,6 +200,7 @@ body {
     color: #526074;
 
     margin-top: 14px;
+
     margin-bottom: 8px;
 }
 
@@ -168,10 +232,12 @@ body {
     margin-top: 25px;
 }
 
+
 .btn {
     display: inline-flex;
 
     align-items: center;
+
     justify-content: center;
 
     padding: 11px 18px;
@@ -187,12 +253,14 @@ body {
     transition: all 0.25s ease;
 }
 
+
 .primary {
-    background: linear-gradient(
-        135deg,
-        #2457d6,
-        #5278ed
-    );
+    background:
+        linear-gradient(
+            135deg,
+            #2457d6,
+            #5278ed
+        );
 
     color: #ffffff;
 
@@ -200,18 +268,22 @@ body {
         0 7px 18px rgba(36, 87, 214, 0.25);
 }
 
-.primary:hover {
-    background: linear-gradient(
-        135deg,
-        #1948bd,
-        #4169df
-    );
 
-    transform: translateY(-3px);
+.primary:hover {
+    background:
+        linear-gradient(
+            135deg,
+            #1948bd,
+            #4169df
+        );
+
+    transform:
+        translateY(-3px);
 
     box-shadow:
         0 11px 24px rgba(36, 87, 214, 0.30);
 }
+
 
 .secondary {
     background: rgba(255, 255, 255, 0.85);
@@ -224,10 +296,12 @@ body {
         0 5px 15px rgba(53, 76, 130, 0.08);
 }
 
+
 .secondary:hover {
     color: #2457d6;
 
-    transform: translateY(-3px);
+    transform:
+        translateY(-3px);
 
     box-shadow:
         0 9px 20px rgba(53, 76, 130, 0.12);
@@ -248,8 +322,10 @@ body {
     position: relative;
 }
 
+
 .profile img {
     width: 180px;
+
     height: 200px;
 
     object-fit: cover;
@@ -263,11 +339,17 @@ body {
 
     box-shadow:
         0 18px 35px rgba(65, 91, 170, 0.20);
+    
+        filter:
+        brightness(1.08)
+        contrast(1.20)
+        saturate(1.15);
 
     transition:
         transform 0.35s ease,
         box-shadow 0.35s ease;
 }
+
 
 .profile img:hover {
     transform:
@@ -305,12 +387,15 @@ body {
         box-shadow 0.3s ease;
 }
 
+
 .section:hover {
-    transform: translateY(-3px);
+    transform:
+        translateY(-3px);
 
     box-shadow:
         0 15px 35px rgba(53, 76, 130, 0.09);
 }
+
 
 .section h2 {
     position: relative;
@@ -324,21 +409,24 @@ body {
     margin-bottom: 20px;
 }
 
+
 .section h2::after {
     content: "";
 
     display: block;
 
     width: 42px;
+
     height: 3px;
 
     margin-top: 8px;
 
-    background: linear-gradient(
-        90deg,
-        #2457d6,
-        #8a6bea
-    );
+    background:
+        linear-gradient(
+            90deg,
+            #2457d6,
+            #8a6bea
+        );
 
     border-radius: 5px;
 }
@@ -357,6 +445,19 @@ body {
 
     text-align: left;
 }
+.about-section {
+    background:
+        linear-gradient(
+            rgba(255, 255, 255, 0.90),
+            rgba(255, 255, 255, 0.90)
+
+        ),
+        url("assests/about.png");
+
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 
 
 /* =========================
@@ -370,6 +471,7 @@ body {
 
     gap: 10px;
 }
+
 
 .skill {
     background:
@@ -397,6 +499,7 @@ body {
     transition: all 0.25s ease;
 }
 
+
 .skill:hover {
     background:
         linear-gradient(
@@ -412,7 +515,22 @@ body {
     box-shadow:
         0 8px 16px rgba(70, 90, 160, 0.12);
 }
+.skills-section {
+    position: relative;
 
+    background:
+        linear-gradient(
+            rgba(255, 255, 255, 0.70),
+            rgba(255, 255, 255, 0.70)
+        ),
+        url("assests/skills.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    overflow: hidden;
+}
 
 /* =========================
    PROJECTS
@@ -421,10 +539,12 @@ body {
 .projects {
     display: grid;
 
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns:
+        repeat(2, 1fr);
 
     gap: 18px;
 }
+
 
 .project-card {
     position: relative;
@@ -457,6 +577,7 @@ body {
     overflow: hidden;
 }
 
+
 .project-card:nth-child(2) {
     background:
         linear-gradient(
@@ -476,9 +597,11 @@ body {
     position: absolute;
 
     width: 120px;
+
     height: 120px;
 
     right: -35px;
+
     bottom: -45px;
 
     background:
@@ -496,6 +619,7 @@ body {
     position: absolute;
 
     right: 22px;
+
     top: 18px;
 
     font-size: 23px;
@@ -506,17 +630,21 @@ body {
         transform 0.25s ease;
 }
 
+
 .project-card:hover {
-    transform: translateY(-7px);
+    transform:
+        translateY(-7px);
 
     box-shadow:
         0 18px 35px rgba(63, 85, 150, 0.13);
 }
 
+
 .project-card:hover::after {
     transform:
         translate(4px, -4px);
 }
+
 
 .project-card h3 {
     position: relative;
@@ -532,6 +660,7 @@ body {
     padding-right: 30px;
 }
 
+
 .project-card p {
     position: relative;
 
@@ -543,9 +672,9 @@ body {
 }
 
 
-/* =========================
+/* =====================================================
    BOTTOM NAVIGATION
-========================= */
+===================================================== */
 
 .bottom-nav {
     max-width: 1100px;
@@ -568,8 +697,11 @@ body {
     box-shadow: none;
 }
 
+
 .nav-card {
-    min-height: 125px;
+    position: relative;
+
+    min-height: 150px;
 
     padding: 24px;
 
@@ -578,6 +710,8 @@ body {
     flex-direction: column;
 
     justify-content: space-between;
+
+    overflow: hidden;
 
     background:
         linear-gradient(
@@ -600,6 +734,9 @@ body {
     transition: all 0.3s ease;
 }
 
+
+/* Education */
+
 .nav-card:nth-child(2) {
     background:
         linear-gradient(
@@ -608,6 +745,9 @@ body {
             #f8f2ff
         );
 }
+
+
+/* Certifications */
 
 .nav-card:nth-child(3) {
     background:
@@ -618,11 +758,78 @@ body {
         );
 }
 
+
+/* =========================
+   BACKGROUND IMAGES
+========================= */
+
+.nav-card::before {
+    content: "";
+
+    position: absolute;
+
+    right: -5px;
+
+    bottom: -25px;
+
+    width: 190px;
+
+    height: 160px;
+
+    background-size: contain;
+
+    background-repeat: no-repeat;
+
+    background-position: center;
+
+    opacity: 0.20;
+
+    z-index: 0;
+
+    pointer-events: none;
+}
+
+
+/* Experience */
+
+.nav-card:nth-child(1)::before {
+    background-image:
+        url("assests/exp.png");
+}
+
+
+/* Education */
+
+.nav-card:nth-child(2)::before {
+    background-image:
+        url("assests/edu.png");
+}
+
+
+/* Certifications */
+
+.nav-card:nth-child(3)::before {
+    background-image:
+        url("assests/cert.png");
+}
+
+
+/* Text and arrow above image */
+
+.nav-card h3,
+.nav-card span {
+    position: relative;
+
+    z-index: 2;
+}
+
+
 .nav-card h3 {
     font-size: 20px;
 
     font-weight: 600;
 }
+
 
 .nav-card span {
     align-self: flex-end;
@@ -635,6 +842,7 @@ body {
         transform 0.25s ease;
 }
 
+
 .nav-card:hover {
     transform:
         translateY(-7px)
@@ -643,6 +851,7 @@ body {
     box-shadow:
         0 18px 35px rgba(53, 76, 130, 0.12);
 }
+
 
 .nav-card:hover span {
     transform:
@@ -659,6 +868,7 @@ body {
 
     margin-top: 24px;
 }
+
 
 .experience-card {
     position: relative;
@@ -686,12 +896,15 @@ body {
         box-shadow 0.3s ease;
 }
 
+
 .experience-card:hover {
-    transform: translateY(-4px);
+    transform:
+        translateY(-4px);
 
     box-shadow:
         0 14px 30px rgba(53, 76, 130, 0.10);
 }
+
 
 .experience-header {
     display: flex;
@@ -703,6 +916,7 @@ body {
     gap: 20px;
 }
 
+
 .experience-card h3 {
     font-size: 21px;
 
@@ -713,6 +927,7 @@ body {
     margin-bottom: 5px;
 }
 
+
 .company {
     font-size: 17px;
 
@@ -721,6 +936,7 @@ body {
     color: #3155a0;
 }
 
+
 .date {
     font-size: 15px;
 
@@ -728,6 +944,7 @@ body {
 
     white-space: nowrap;
 }
+
 
 .location {
     font-size: 15px;
@@ -739,9 +956,11 @@ body {
     margin-bottom: 14px;
 }
 
+
 .experience-card ul {
     padding-left: 20px;
 }
+
 
 .experience-card li {
     font-size: 16px;
@@ -764,6 +983,7 @@ body {
     margin-top: 24px;
 }
 
+
 .education-card {
     background:
         linear-gradient(
@@ -782,6 +1002,7 @@ body {
         0 8px 22px rgba(53, 76, 130, 0.06);
 }
 
+
 .education-header {
     display: flex;
 
@@ -791,6 +1012,7 @@ body {
 
     gap: 20px;
 }
+
 
 .education-card h3 {
     font-size: 21px;
@@ -802,6 +1024,7 @@ body {
     margin-bottom: 6px;
 }
 
+
 .degree {
     font-size: 17px;
 
@@ -810,11 +1033,13 @@ body {
     margin-bottom: 4px;
 }
 
+
 .college {
     font-size: 16px;
 
     color: #647083;
 }
+
 
 .affiliation {
     font-size: 15px;
@@ -823,6 +1048,7 @@ body {
 
     margin-top: 4px;
 }
+
 
 .cgpa {
     display: inline-block;
@@ -858,6 +1084,7 @@ body {
     margin-top: 24px;
 }
 
+
 .certifications {
     display: grid;
 
@@ -866,6 +1093,7 @@ body {
 
     gap: 16px;
 }
+
 
 .certification-card {
     display: block;
@@ -891,6 +1119,7 @@ body {
     transition: all 0.3s ease;
 }
 
+
 .certification-card:nth-child(even) {
     background:
         linear-gradient(
@@ -899,6 +1128,7 @@ body {
             #faf5ff
         );
 }
+
 
 .certification-card:hover {
     transform:
@@ -909,6 +1139,7 @@ body {
         0 15px 30px rgba(53, 76, 130, 0.11);
 }
 
+
 .certification-card h3 {
     font-size: 18px;
 
@@ -918,6 +1149,7 @@ body {
 
     margin-bottom: 7px;
 }
+
 
 .certification-card p {
     font-size: 15px;
@@ -944,15 +1176,18 @@ body {
         border-radius: 25px;
     }
 
+
     .top-row {
         flex-direction: column;
 
         gap: 12px;
     }
 
+
     .intro h1 {
         font-size: 36px;
     }
+
 
     .contact-info {
         flex-wrap: wrap;
@@ -964,23 +1199,28 @@ body {
         font-size: 14px;
     }
 
+
     .title {
         font-size: 21px;
     }
+
 
     .buttons {
         justify-content: center;
     }
 
+
     .profile {
         width: auto;
     }
+
 
     .profile img {
         width: 145px;
 
         height: 165px;
     }
+
 
     .section {
         margin-left: 15px;
@@ -992,9 +1232,11 @@ body {
         border-radius: 21px;
     }
 
+
     .projects {
         grid-template-columns: 1fr;
     }
+
 
     .bottom-nav {
         margin-left: 15px;
@@ -1006,9 +1248,11 @@ body {
         padding: 8px;
     }
 
+
     .nav-card {
-        min-height: 105px;
+        min-height: 120px;
     }
+
 
     .experience-header,
     .education-header {
@@ -1017,13 +1261,16 @@ body {
         gap: 8px;
     }
 
+
     .date {
         white-space: normal;
     }
 
+
     .certifications {
         grid-template-columns: 1fr;
     }
+
 }
 
 
@@ -1039,37 +1286,54 @@ body {
         margin: 10px;
     }
 
+
     .intro h1 {
         font-size: 32px;
     }
+
 
     .title {
         font-size: 19px;
     }
 
-    .technologies {
-        font-size: 15px;
-    }
 
     .buttons {
         flex-direction: column;
     }
 
+
     .btn {
         width: 100%;
     }
+
 
     .section h2 {
         font-size: 24px;
     }
 
+
     .about-text {
         font-size: 16px;
     }
+
 
     .profile img {
         width: 135px;
 
         height: 150px;
     }
+
+
+    /* Smaller background illustrations */
+
+    .nav-card::before {
+        width: 150px;
+
+        height: 125px;
+
+        right: -5px;
+
+        bottom: -20px;
+    }
+
 }
