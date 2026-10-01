@@ -45,3 +45,50 @@ function showCertifications(event) {
         certifications.style.display = "none";
     }
 }
+
+const title = document.querySelector(".title");
+const profile = document.querySelector(".profile");
+const buttons = document.querySelector(".buttons");
+
+const text = "Graduate Engineer Trainee | Software Developer";
+
+title.textContent = "";
+
+// Hide image and buttons initially
+profile.style.opacity = "0";
+profile.style.transform = "translateY(20px)";
+
+buttons.style.opacity = "0";
+buttons.style.transform = "translateY(20px)";
+
+let index = 0;
+
+function typeText() {
+    if (index < text.length) {
+        title.textContent += text.charAt(index);
+        index++;
+
+        setTimeout(typeText, 70);
+    } else {
+
+        // Image appears slowly
+        profile.style.transition =
+            "opacity 2s ease, transform 2s ease";
+
+        profile.style.opacity = "1";
+        profile.style.transform = "translateY(0)";
+
+        // Buttons appear after image
+        setTimeout(() => {
+            buttons.style.transition =
+                "opacity 1.5s ease, transform 1.5s ease";
+
+            buttons.style.opacity = "1";
+            buttons.style.transform = "translateY(0)";
+        }, 2200);
+    }
+}
+
+typeText();
+
+typeText();
